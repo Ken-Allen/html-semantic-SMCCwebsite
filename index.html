@@ -3,24 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="icon\SMCC LOGO.png">
+    <link rel="stylesheet" href="style/style.css">
     <title>SMCC Website</title>
 </head>
 <body>
 
-    <header>
+    <header id="top">
         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#about">About SMCC</a></li>
-                <li><a href="#product">Courses Offered</a></li>
-                <li><a href="#promo">Services</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+
+            <ul class="sidebar"> 
+                <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="responsive.html">HOME</a></li>
+                <li><a href="#about">ABOUT SMCC</a></li>
+                <li><a href="#course">COURSES OFFERED</a></li>
+                <li><a href="#service">SERVICES</a></li>
+                <li><a href="#contact">CONTACT US</a></li>
+            </ul>
+
+            <ul class="topnav">
+                <li><a href="responsive.html"><img src="icon/SMCC LOGO.png" alt="logo" height="50px"></a></li>
+                <li class="hideOnMobile"><a href="responsive.html">HOME</a></li>
+                <li class="hideOnMobile"><a href="#about">ABOUT SMCC</a></li>
+                <li class="hideOnMobile"><a href="#course">COURSES OFFERED</a></li>
+                <li class="hideOnMobile"><a href="#service">SERVICES</a></li>
+                <li class="hideOnMobile"><a href="#contact">CONTACT US</a></li>
+                <li class="menu-btn" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
             </ul>    
+
         </nav>
+
+        <!--  open and close navbar -->
+        <script>
+            function showSidebar(){
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'flex'
+            }
+            function hideSidebar(){
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'none'
+            }
+        </script>
+
     </header>
-    <main></main>
-    <footer></footer>
+
+    <main> 
+        <article id="about">
+            <h1>ABOUT SAINT MICHAEL COLLEGE OF CARAGA</h1>
+                <section id="left-column">   
+                    <figure>
+                        <img src="img/st-michael.jpg" alt="st. michael">
+                    </figure>
+                </section>
+
+                <section id="right-column">
+                    <h2>Vision</h2>
+                    <p>Saint Michael College of Caraga Envisions to be a University by 2035 and Upholds Spiritual Formation and Excellence in Teaching, Service, and Research.</p>
+
+                    <h2>Goal</h2>
+                    <p>Uphold Culture of Excellence in the Areas of Spiritual Formation, Instruction, Research, and Extension, thus Produce Graduates that are Globally Competent, Spiritally Embodied, and Socially Responsible.</p>
+                </section>
+
+                <section>
+                    <h2>Mission</h2>
+                    <p>
+                        SMCC shall provide spiritual formation and learning culture that will ensure the students with excellent and rewarding learning experience that transform lives, abound spirituality, develop skills and prepare future leaders. <br><br>
+
+                        SMCC shall engage in dynamic, innovative, and interdisciplinary researches that are publishable to advance and achieve institutional initiatives. <br><br>
+
+                        SMCC shall commit to serve the diverse and local communities in fostering innovations through service-learning that enhances reciprocal community partnerships for spiritual and social development.
+                    </p>
+                </section>
+        </article>
+        
+        <article id="course">
+            <h1>COURSES OFFERED</h1>
+                <section >   
+                    <h4>COLLEGE OF ARTS AND SCIENCES</h4>
+                    <P>BACHELOR OF ARTS MAJOR IN ENGLISH LANGUAGE</P> 
+                </section>
+                    
+                <section>
+                    <h4>COLLEGE OF BUSINESS MANAGEMENT</h4>
+                    <P>BACHELOR OF PUBLIC ADMINISTRATION</P><hr><br>
+                    <p>BACHELOR OF SCIENCE IN ENTREPRENEURSHIP</p><hr><br>
+                    <p>BACHELOR OF SCIENCE IN BUSINESS ADMINISTRATION MAJOR IN FINANCIAL MANAGEMENT</p>
+                </section>
+
+                <section>
+                    <h4>COLLEGE OF COMPUTING AND INFORMATION SCIENCES</h4>
+                    <p>BACHELOR OF SCIENCE IN INFORMATION TECHNOLOGY</p><hr><br>
+                    <p>BACHELOR OF SCIENCE IN COMPUTER SCIENCE</p><hr><br>
+                    <p>BACHELOR OF LIBRARY AND INFORMATION SCIENCES</p><hr><br>
+                    <p>DIPLOMA IN INFORMATION TECHNOLOGY</p>
+                </section>
+        </article>
+        
+        <article id="service">
+            <h1>SERVICES OFFERED</h1>
+                <section >   
+                    <h4>ONLINE</h4>
+                    <ul>
+                        <li>ONLINE ENROLLMENT</li>
+                        <li>STUDENT PORTAL</li>
+                        <li>OFFICIAL FACEBOOK PAGE</li>
+                        <li>YOUTUBE CHANNEL</li>
+                    </ul>
+                </section>
+                <section>
+                    <h4>STUDENT SERVICES</h4>
+                    <ul>
+                        <li>ADMINSSION AND SCHOLARSHIP</li>
+                        <li>AUXILARY SERVICES</li>
+                        <li>CAMPUS ORGANIZATION</li>
+                        <li>GUIDANCE SERVICES</li>
+                        <li>HEALTH SERVICES</li>
+                        <li>HOUSING AND RESIDENTIAL</li>
+                        <li>SAFETY AND SECURITY</li>
+                        <li>STUDENT DISCIPLINE</li>
+                    </ul>
+                </section>
+        </article>
+        
+        <article id="contact">
+            <h1>CONTACT US:</h1>
+                <section >
+                    <img src="icon/location-yelo.png" alt="location">
+                    <p>Atupan St. Brgy. 4, Nasipit, Agusan del Norte Mindanao, Philippines 8602</p><br>
+                    <img src="icon/yelo-fb.ico" alt="fb">
+                    <p>https://www.facebook.com/SMCCofficial</p><br>
+                    <img src="icon/envelope-yelo.png" alt="email">
+                    <p>admin@smccnasipit.edu.ph</p><br>
+                    <img src="icon/phone-yelo.png" alt="call us">
+                    <p>(085) 225-0208 / 0906-404-8695</p><br>
+                    <img src="icon/clock-yelo.png" alt="time">
+                    <p>8:00 am - 5:00 pm</p><br>
+                </section>
+        </article>
+
+    </main>
+
+
+    <footer>
+        <img src="icon/SMCC LOGO.png" alt="logo" height="50px">
+        <p>SAINT MICHAEL COLLEGE OF CARAGA</p>
+        <a href="#top"><img src="icon\up-chevron-yelo.png" alt="up" height="20px"></a>
+    </footer>
     
 </body>
 </html>
