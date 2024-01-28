@@ -1,17 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 *{
     margin: 0;
     padding: 0;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
     min-height: 100vh;
-    background-image: url(img/Bloo.jpg);
+    background-image: url(/img/Bloo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 nav{
-    background-color: white;
+    background-color: #130d4f;
     box-shadow: 3px, 3px, 5px, rgba(0, 0, 0, 0.1);
 }
 nav ul{
@@ -19,6 +23,146 @@ nav ul{
     list-style: none;
     display: flex;
     justify-content: flex-end;
+    align-items: center; 
+    position: -webkit-sticky; /* for safari browser */
+    position: sticky;
+    top: 0;  
+}
+nav li{
+    height: 50px;
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+nav a:hover{
+   color: #fec514;
+}
+nav li:first-child{
+    margin-right: auto;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10 0 10 rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.sidebar li{
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+}
+.menu-btn{
+    display: none;
+}
+@media(max-width: 800px){
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-btn{
+        display: block;
+    }
+}
+@media(max-width: 400px){
+    .sidebar{
+        width: 100%;
+    }
+}
+main{
+    padding-top: 50px;
+    max-width: auto;
+}
+main article{
+    margin-left: 200px; 
+    margin-right: 200px;
+    margin-bottom: 20px;  
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    background-color: #130d4f;
+}
+main h1,h2{
+    color: #fec514;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+main p{
+    color: #BCBACF;
+    font-size: 20px;
+}
+
+#about{
+    padding: 20px;
+    box-sizing: border-box; 
+}
+#course{
+    display: flex;
+    align-items: center;
+}
+#course section{
+    width: 40%;
+    float: left;
+    padding: 10px;
+}
+#course h4{
+    color: #fec514;
+}
+
+#service{
+    display: flex;
+    align-items: center;
+}
+#service section{
+    width: 40%;
+    float: left;
+    padding: 10px;
+}
+#service h4{
+    color: #fec514;
+}
+#service ul{
+    list-style: none;
+    color: #BCBACF;
+}
+
+#contact{
+    display: flex;
+    align-items: center;
+}
+#contact h1{
+    margin-right: 20px;
+}
+#contact img{
+    float: left;
+    height: 25px;
+}
+
+footer{
+    background-color: #130d4f;
+    box-shadow: 3px, 3px, 5px, rgba(0, 0, 0, 0.1);
+    display: flex;
     align-items: center;
     
+    padding: 10px;
+}
+footer p{
+    font-size: 25px;
+    color: #BCBACF;
+}
+footer a{
+    margin-left: auto;
 }
