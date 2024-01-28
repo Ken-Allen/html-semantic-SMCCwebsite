@@ -8,7 +8,7 @@ html{
 }
 body{
     min-height: 100vh;
-    background-image: url('img\Bloo.jpg');
+    background-image: url(img\Bloo.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
